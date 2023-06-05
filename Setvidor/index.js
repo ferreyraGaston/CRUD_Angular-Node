@@ -7,6 +7,8 @@ const app=express();
 //conectamos a la base de datos
 conectarDB();
 
+app.use(express.json());
+
 app.use('/api/productos',require('./routes/producto'));
 
 app.listen(4000, ()=>{
