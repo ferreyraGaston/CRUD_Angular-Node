@@ -1,11 +1,13 @@
 const express = require('express');
 const res = require('express/lib/response');
+const conectarDB= require('./config/db')
 
+// conectamos al servidor
 const app=express();
+//conectamos a la base de datos
+conectarDB();
 
-app.get('/',(req,res)=>{
-    res.send("hola Mundo")
-})
+app.use('/api/productos',require('./routes/producto'));
 
 app.listen(4000, ()=>{
     console.log("El servidor está corriendo perfectamente");
