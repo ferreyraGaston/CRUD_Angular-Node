@@ -1,0 +1,4 @@
+.text-danger{
+    text-align: start; /*para queqede a la izquierda*/
+    margin-left: 7px; /* para separar un poco del imput*/
+}
