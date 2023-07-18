@@ -10,6 +10,7 @@ conectarDB();
 app.use(express.json());
 
 app.use('/api/productos',require('./routes/producto'));
+//app.use('/api/clientes',require('./routes/cliente'));
 
 app.listen(4000, ()=>{
     console.log("El servidor está corriendo perfectamente");

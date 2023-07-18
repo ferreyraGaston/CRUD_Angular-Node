@@ -19,8 +19,6 @@ exports.crearProducto =async (req,res)=>{
 exports.obtenerProdctos =async (req,res)=>{
     try{
         const productos= await Producto.find();
-
-
         res.json(productos);
 
     }catch(error){
@@ -47,7 +45,7 @@ exports.actualizarProdctos=async (req,res)=>{
         producto=await Producto.findByIdAndUpdate({_id:req.params.id},producto,{new:true})
 
         res.json(producto);
-     
+
 
     }catch(error){
         console.log(error);
